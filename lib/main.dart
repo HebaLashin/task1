@@ -149,7 +149,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),],),),
 
               Image.asset("assets/images/fantastic.png",height: 50,width: 100,),
-              Image.asset("assets/images/fantastic.png",height: 200,width: 200),
+              Image.asset("assets/images/hamburger.png",height: 200,width: 200),
 
 
 
