@@ -44,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       child:ElevatedButton(
 
                         onPressed: () { Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => login()),);
+                        MaterialPageRoute(builder: (context) =>  login()),);
                         },
                         child: Text('Skip'),
                         style: ElevatedButton.styleFrom(
@@ -86,7 +86,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 width: double.infinity,
                 margin: EdgeInsets.all(20),
                 child:ElevatedButton(
-                  onPressed: () {  },
+                  onPressed: () {  Navigator.push(context,
+                    MaterialPageRoute(builder: (context) =>  login()),);
+                  },
                   child: Text('Get Started'),
                   style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(
@@ -134,7 +136,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       margin: EdgeInsets.only(top :30,right: 20),
                       child:ElevatedButton(
 
-                        onPressed: () {  },
+                        onPressed: () {  Navigator.push(context,
+                          MaterialPageRoute(builder: (context) =>  login()),);
+                        },
                         child: Text('Skip'),
                         style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
@@ -199,7 +203,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 width: double.infinity,
                 margin: EdgeInsets.all(20),
                 child:ElevatedButton(
-                  onPressed: () {  },
+                  onPressed: () {  Navigator.push(context,
+                    MaterialPageRoute(builder: (context) =>  login()),);
+                  },
                   child: Text('Get Started'),
                   style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(

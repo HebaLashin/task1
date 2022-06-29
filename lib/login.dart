@@ -1,28 +1,52 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+
 void main() {
   runApp( login());
 }
-class login extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-    );
-  }
-}
 
-class log extends StatefulWidget {
+
+class login extends StatelessWidget {
+
   @override
-  State<log> createState() => _MyHomePageState();
-}
-class _MyHomePageState extends State<log> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        body:Text('hi')
-    );}
-}
+Widget build(BuildContext context) {
+  return MaterialApp(
+    title: 'Welcome to Flutter',
+    home: Scaffold(
+      body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: <Widget>[
+            Image.asset("assets/images/blueberry.png",height: 100,width: 100),
+            Text('Welcome to Fashion Daily',style: TextStyle(color: Colors.grey),
+              textAlign: TextAlign.right,
+              ),
+            Container(
+             // margin : EdgeInsets.all(10),
+              child: Row(
+                children: <Widget>[
+                Text('Sign In',
+                style:  TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 40,),
+              textAlign: TextAlign.left,
+            ),
+
+                Text('Help',
+                  style:  TextStyle(color: Colors.blue,fontWeight: FontWeight.bold,fontSize: 10,),
+                  textAlign: TextAlign.right,
+                ),
+
+            ],),),
+           Container(
+            child : TextField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+              ),
+            )
+           ),
+
+          ],
+      ),
+    ),
+  );
+
+}}
