@@ -228,7 +228,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     TextButton(
                       child:  Text('Sign Up',style: TextStyle(color: Colors.green),),
                       onPressed: (
-
                           ){},)
                     ,
                   ], ),
