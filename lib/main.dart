@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_appp/login.dart';
+import 'package:flutter_appp/register.dart';
 
 void main() {
   runApp(const MyApp());
@@ -111,16 +112,13 @@ class _MyHomePageState extends State<MyHomePage> {
                     TextButton(
                       child:  Text('Sign Up',style: TextStyle(color: Colors.green),),
                       onPressed: (
-
-                          ){},)
+                          ){ Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => register()),);
+                      },)
                     ,
                   ], ),
               ),
-
-
-
-            ],
-
+           ],
           ),
         ),
         Center(
@@ -210,14 +208,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
-
                     ),
-
                   ),
                 ),
               ),
-
-
               Container(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -225,10 +219,17 @@ class _MyHomePageState extends State<MyHomePage> {
                     Text(
                       'Dont have an account ?',style: TextStyle(fontWeight: FontWeight.bold),
                     ),
+
+
+
+
+
                     TextButton(
                       child:  Text('Sign Up',style: TextStyle(color: Colors.green),),
                       onPressed: (
-                          ){},)
+                          ){ Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => register()),);
+                      },)
                     ,
                   ], ),
               ),

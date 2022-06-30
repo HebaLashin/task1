@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_appp/register.dart';
-import 'package:country_list_pick/country_list_pick.dart';
+import 'package:country_code_picker/country_code_picker.dart';
 
 
 
@@ -44,18 +44,16 @@ Widget build(BuildContext context) {
                 children: <Widget>[
                 Text('Sign in',
                 style:  TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 35,),
-            //  textAlign: TextAlign.left,
             ),
             Container(
               child:Row(
               children: <Widget>[
               Text('Help',
                   style:  TextStyle(color: Colors.blue,fontSize: 15,),
-               //   textAlign: TextAlign.right,
 
               ),
               IconButton(onPressed: (){}
-              , icon:   Icon(Icons.help),iconSize : 25),
+              , icon:   Icon(Icons.help),iconSize : 25,color: Colors.blue,),
             ],),), ],),),
 
             Container(
@@ -66,24 +64,34 @@ Widget build(BuildContext context) {
               style:  TextStyle(color: Colors.black,fontSize: 17,),
             ),),
 
-           Container(
-             height: 50,
-               width: double.infinity,
-               margin: EdgeInsets.only(left:20,right: 20,top: 10),
-               child : TextField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: "Eg. 812345678",
+             Container(
+               height: 50,
+             margin: EdgeInsets.only(left:20,right: 20,top: 10),
+                 decoration: BoxDecoration(
+                     border: Border.all(),
+                   borderRadius: BorderRadius.circular(7)
+                 ),
+            child:Row(
+                mainAxisAlignment:  MainAxisAlignment.spaceBetween,
+                children: <Widget>[Container(
+             width: MediaQuery.of(context).size.width*0.42,
+              child : CountryCodePicker(
+                initialSelection: '+81',
+                showFlagMain : false,
+                alignLeft : true,
+                showDropDownButton: true,
               ),
-            )
-           ),
-            Container(
-
-                child : CountryListPick(
-                  initialSelection: '+81'
-                  ),
-
             ),
+               Container (
+                   width: MediaQuery.of(context).size.width*0.42,
+                 child : TextFormField(
+                   decoration: InputDecoration(
+                    // border: UnderlineInputBorder(),
+                     hintText: "Eg. 812345678",
+                   ),
+                 )
+                   ),])),
+
             Container(
               height: 50,
               width: double.infinity,
@@ -127,9 +135,10 @@ Widget build(BuildContext context) {
               margin: EdgeInsets.only(right: 20,left: 20,top: 10),
               child:ElevatedButton.icon(
                 onPressed: () {},
-                icon: Icon(Icons.email,size : 24 ),
-                label: Text('Sign with by google',style: TextStyle(fontSize: 18),),
+                icon: Icon(Icons.email,size : 24 ,color: Colors.grey,),
+                label: Text('Sign with by google',style: TextStyle(fontSize: 18,color: Colors.blue),),
                 style: ElevatedButton.styleFrom(
+                  primary: Colors.white,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(7),
                   ),
